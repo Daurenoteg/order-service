@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  docker:
+    compose:
+      enabled: false
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: pass
+  datasource:
+    url: jdbc:postgresql://localhost:5433/orders_db
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+app:
+  rabbitmq:
+    exchange: order-exchange
+    routing-key: order-routing-key
+    queue: order-queue
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui
+    enabled: true
+
+
+
