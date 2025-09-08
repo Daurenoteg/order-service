@@ -1,1 +1,3 @@
-Basic order-producer service for study
+Order Preoducer Service
+
+Order-producer service for study Rabit MQ capabilities
